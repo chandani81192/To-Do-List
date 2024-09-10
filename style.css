@@ -1,42 +1,36 @@
-* {
+/* * {
   box-sizing: border-box;
   padding-top: 8px;
 }
 
-/* Remove margin and padding from the list */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* Style the list items */
 ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  /* background: #eee; */
+
   background-color: gray;
   font-size: 18px;
   transition: 0.2s;
 
-  /* make the list items unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
-/* Darker background-color on hovr */
 ul li:hover {
   background: #ddd;
 }
 
-/* When clicked on, add a background olor and strike out text */
 ul li.checked {
   background: #888;
 
@@ -44,7 +38,6 @@ ul li.checked {
   text-decoration: line-through;
 }
 
-/* Add a "checked" mark when clicked on */
 ul li.checked::before {
   content: "";
   position: absolute;
@@ -58,7 +51,6 @@ ul li.checked::before {
   width: 7px;
 }
 
-/* Style the close button */
 .close {
   position: absolute;
   right: 0;
@@ -71,7 +63,6 @@ ul li.checked::before {
   color: white;
 }
 
-/* Style the header */
 .header {
   background-color: #726e6e;
   padding: 30px 40px;
@@ -79,15 +70,12 @@ ul li.checked::before {
   text-align: center;
 }
 
-/* Clear floats after the header */
-
 .header:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Style the input */
 input {
   margin: 0;
   border: none;
@@ -98,7 +86,6 @@ input {
   font-size: 16px;
 }
 
-/* Style the "Add z" button */
 .addBtn {
   padding: 10px;
   width: 25%;
@@ -127,4 +114,81 @@ li button {
 
 li button:hover {
   background-color: #a2807e;
+} */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #eee;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+li button {
+  background-color: #dc3545;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #c82333;
 }
